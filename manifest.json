@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Side Panel Fetcher",
+  "version": "1.1",
+  "description": "Egyszerű Chrome Side Panel fetcher és link kinyerő eszköz (CORS engedéllyel).",
+  "permissions": ["storage", "sidePanel"],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open Side Panel",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

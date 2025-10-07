@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Side Panel</title>
+  <style>
+    body{font-family:Segoe UI, Roboto, Arial; margin:12px; font-size:13px}
+    .row{display:flex;gap:8px;align-items:center}
+    input[type="text"]{flex:1;padding:6px;border:1px solid #ccc;border-radius:4px}
+    button{padding:6px 10px;border-radius:6px;border:1px solid #999;background:#f3f3f3;cursor:pointer}
+    button:active{transform:translateY(1px)}
+    #indicator{height:6px;border-radius:4px;background:#eee;margin-top:8px}
+    #data-container{margin-top:12px;max-height:320px;overflow:auto;border:1px solid #e6e6e6;padding:8px;border-radius:6px;background:#fff}
+    #status-container{margin-top:8px;color:#333;font-weight:600}
+    .link-row{padding:6px 4px;border-bottom:1px solid #f1f1f1}
+    .icon{display:inline-block;width:18px;text-align:center;margin-right:6px}
+    .btn-icon{margin-right:6px}
+    a.small{font-size:12px;color:#0066cc;text-decoration:none}
+  </style>
+</head>
+<body>
+<div class="row">
+  <label for="urlInput" style="margin-right:6px">URL</label>
+  <input id="urlInput" name="URL" type="text" value="https://www.companywall.hu/" />
+</div>
+
+<div class="row" style="margin-top:8px">
+  <button id="fetchBtn"><span class="btn-icon">🔍</span>FETCH</button>
+  <button id="clearBtn"><span class="btn-icon">🧹</span>CLEAR</button>
+</div>
+
+<div id="indicator" aria-hidden="true"></div>
+
+<div id="status-container">Találatok: —</div>
+<div id="data-container" aria-live="polite"></div>
+
+<script src="sidepanel.js"></script>
+</body>
+</html>

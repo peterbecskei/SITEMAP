@@ -1,3 +1,24 @@
+# Chrome Extension Side Panel — English Summary (MV3)
+
+This project is a complete **Chrome Extension (Manifest V3)** designed to open a custom **Side Panel** for fetching and analyzing webpage content. It allows users to enter a URL, fetch its HTML content, extract links, and display them in a simple list. All results are stored in `localStorage`, and the user can clear the data anytime. The extension opens automatically in the Side Panel when the user clicks the browser action icon.
+
+---
+
+## 🧩 Features Overview
+- **Manifest V3 compatible** (tested on Windows 10)
+- Uses the **Side Panel API** (not a popup)
+- **Input field** for a custom URL (default: `https://www.companywall.hu/`)
+- **FETCH** button — retrieves the page content using `fetch()`
+- **CLEAR** button — resets the UI and clears `localStorage`
+- **Data container** — displays extracted links line by line
+- **Status container** — shows number of links found or fetch status
+- **Indicator bar** — visual signal for fetch success or idle state
+- **Local storage** — preserves user input, results, and state between sessions
+- **Cross-domain fetch enabled** via `host_permissions: ["<all_urls>"]`
+- Lightweight, clean, and easy-to-extend codebase
+
+
+
 
 
 késíts egy chrome extension  (V3, win10) sidepanel.js és a hozzá tartozó sidepanel.html-t.
