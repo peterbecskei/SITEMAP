@@ -1,0 +1,17 @@
+
+
+késíts egy chrome extension  (V3, win10) sidepanel.js és a hozzá tartozó sidepanel.html-t.
+Hozz létre a Side Panelen: 
+1 input mező, name=URL, deafult erték : "https://www.companywall.hu/"
+FETCH gomb, 
+CLEAR gomb,
+egy data-contianert (fetch result)
+és status-contianert
+és egy kijelőt ami megleníti a gombok alatt a html-ben.
+ne elegyen pupup, az automatikusan nyíljon a Side Panel (felhasználói gesztushoz kötötten).
+A CLEAR gomb, kattintésra törli a  data-contianert és status-contianert alap állapotba hozza a kódot, local storage ürítés.
+A FETCH gomb az input mező URL-t adattartalmát (fetch(url).. respons.text) kinyeri egy URL_CONTENT változóba , a statust pedig az URL_STATUS-ba.
+Ha sikeres volt a "FECTH" akkor az URL_CONTENT-ben lévő link-el ről készsen egy listát. (http://, www., href, stb)
+A listtát jelenítse meg a  data-contianer-ben soronként (addchild), a status-contianer.ben jelenítse meg a találatok számát. 
+A mentesen minden el local storage-ba. 
+Egyelő ne legyenek speci ikonok, csak helyt jelezze default ikonnal, amit később váztok ki. A 2 gomb szövege elé is 2 default ikonnal jelölje.  
